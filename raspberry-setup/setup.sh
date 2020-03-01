@@ -36,6 +36,7 @@ setup_samba () {
   writable = yes" >> /etc/samba/smb.conf
 
   echo "/dev/sda1 /mnt/NetworkStorage auto nofail,uid=pi,gid=pi,umask=002,noatime 0 0" >> /etc/fstab
+  smbpassword -a pi
 }
 
 init () {
